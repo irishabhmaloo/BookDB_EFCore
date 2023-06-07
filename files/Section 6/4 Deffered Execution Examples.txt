@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   var bookTemp = _db.Books.FirstOrDefault();
             bookTemp.Price = 100;
 
@@ -18,4 +19,26 @@
             var bookCollection2 = _db.Books;
             var bookCount1 = bookCollection2.Count();
 
+=======
+  var bookTemp = _db.Books.FirstOrDefault();
+            bookTemp.Price = 100;
+
+            var bookCollection = _db.Books;
+            double totalPrice = 0;
+
+            foreach(var book in bookCollection)
+            {
+                totalPrice += book.Price;
+            }
+
+            var bookList = _db.Books.ToList();
+            foreach (var book in bookList)
+            {
+                totalPrice += book.Price;
+            }
+
+            var bookCollection2 = _db.Books;
+            var bookCount1 = bookCollection2.Count();
+
+>>>>>>> 70043175de8cb5f207fa8fdf97a543e26a88196b
             var bookCount2 = _db.Books.Count();
